@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Async JavaScript Practice</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================
+   ROOT VARIABLES
+===================== */
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --accent: #22c55e;
+  --border: rgba(0,0,0,0.08);
+}
+
+/* DARK MODE */
+.dark-mode {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --border: rgba(255,255,255,0.08);
+}
+
+/* =====================
+   GLOBAL STYLES
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.4s ease;
+}
+
+/* =====================
+   CONTAINER
+===================== */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+/* =====================
+   CARD DESIGN
+===================== */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  animation: fadeIn 0.8s ease;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-green {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-green:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* GitHub Button */
+.github {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/* =====================
+   INFO BOX
+===================== */
+.highlight {
+  margin: 20px 0;
+  padding: 15px;
+  border-left: 5px solid var(--primary);
+  background: rgba(79,70,229,0.08);
+  border-radius: 10px;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.section {
+  margin-top: 30px;
+}
+
+.section h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+/* =====================
+   LIST
+===================== */
+ul {
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+ul li {
+  margin: 6px 0;
+}
+
+/* =====================
+   DEMO AREA
+===================== */
+.demo-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+#demo-area {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.05);
+  min-height: 40px;
+
+  /* ADDED: smooth text updates */
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.dark-mode #demo-area {
+  background: rgba(255,255,255,0.06);
+}
+
+/* ADDED: loading state animation */
+.loading {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+/* =====================
+   IMAGE
+===================== */
+img {
+  width: 100%;
+  border-radius: 14px;
+  margin-top: 15px;
+  border: 1px solid var(--border);
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* =====================
+   ANIMATION
+===================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ADDED: spinner animation */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(0,0,0,0.2);
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="card">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>  Async JavaScript Practice</h1>
+      <button id="darkModeBtn" class="btn-green">🌙 Dark Mode</button>
+    </div>
+
+    <!-- GITHUB -->
+    <a class="github" href="https://github.com/langatbrian/async-js-project" target="_blank">
+      <button class="btn-primary">⭐ View on GitHub</button>
+    </a>
+
+    <!-- INTRO -->
+    <p style="margin-top:20px; color: var(--muted); line-height:1.6;">
+      This project explores core concepts of asynchronous JavaScript including
+      <strong>Callbacks, Promises, and Async/Await</strong>.
+    </p>
+
+    <div class="highlight">
+      💡 Tip: Open your browser console to see async operations running in real time.
+    </div>
+
+    <!-- WHAT YOU LEARN -->
+    <div class="section">
+      <h2>📘 What This Project Covers</h2>
+      <ul>
+        <li>Callbacks</li>
+        <li>Promises</li>
+        <li>Async/Await</li>
+      </ul>
+    </div>
+
+    <!-- DEMO -->
+    <div class="section">
+      <h2> Live Demo</h2>
+
+      <div class="demo-buttons">
+        <button class="btn-primary" id="callbackBtn">Callback Demo</button>
+        <button class="btn-primary" id="promiseBtn">Promise Demo</button>
+        <button class="btn-primary" id="asyncBtn">Async/Await Demo</button>
+      </div>
+
+      <!-- ADDED: loading hint (optional UI helper) -->
+      <p style="margin-top:8px; color: var(--muted); font-size: 13px;">
+        Click a button to simulate async behavior (delayed execution)
+      </p>
+
+      <p id="demo-area">Ready...</p>
+      <div id="loader" style="display:none; margin-top:10px;">
+  ⏳ Processing...
+</div>
+
+    </div>
+
+    <!-- IMAGE -->
+    <div class="section">
+      <h2>🖼 Infographic</h2>
+      <img src="./assets/async-js-infographic.png" alt="Async JavaScript Infographic">
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      Built with  by Brian Cheruiyot <br>
+      Odin Project  
+    </div>
+
+  </div>
+
+</div>
+
+<!-- DARK MODE SCRIPT -->
+<script>
+const darkBtn = document.getElementById("darkModeBtn");
+
+darkBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  if(document.body.classList.contains("dark-mode")){
+    darkBtn.textContent = "☀️ Light Mode";
+  } else {
+    darkBtn.textContent = "🌙 Dark Mode";
+  }
+});
+</script>
+
+<script type="module" src="./src/main.js"></script>
+
+</body>
+</html>
