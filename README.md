@@ -1,4 +1,4 @@
-# 🚀 Async JavaScript Simulator
+#  Async JavaScript Simulator
 
 An interactive project demonstrating **Callbacks, Promises, and Async/Await** in JavaScript.
 
