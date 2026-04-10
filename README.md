@@ -69,4 +69,15 @@ This project helped me understand:
 ---
 
 # 📁 Project Structure
+async-js-project
+│
+├── index.html
+├── script.js
+├── README.md
+│
+├── assets
+│   ├── async-js-infographic.png
+│   └── project-screenshot.png
+│
+└── src
 
