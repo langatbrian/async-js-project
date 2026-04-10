@@ -24,14 +24,10 @@ This project visually explains how asynchronous JavaScript works using a clean U
 
 ![Async JS Infographic](assets/async-js-infographic.png)
 # 📸 Project Screenshot
-# 🧠 Async JavaScript Infographic
 
 ![Async JS Screenshot](assets/project-screenshot.png)
 
-![Async JS Infographic](assets/async-js-infographic.png)
-
 ---
-
 # ✨ Features
 
 - Callback Simulation
