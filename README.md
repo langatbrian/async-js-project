@@ -24,6 +24,9 @@ This project visually explains how asynchronous JavaScript works using a clean U
 
 ![Async JS Infographic](assets/async-js-infographic.png)
 # 📸 Project Screenshot
+# 🧠 Async JavaScript Infographic
+
+![Async JS Infographic](assets/async-js-infographic.png)
 
 ![Async JS Screenshot](assets/project-screenshot.png)
 
