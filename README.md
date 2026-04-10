@@ -1,32 +1,73 @@
-# Async JavaScript Practice
+# 🚀 Async JavaScript Simulator
 
-This project demonstrates core asynchronous JavaScript concepts:
+An interactive project demonstrating **Callbacks, Promises, and Async/Await** in JavaScript.
 
-- Callbacks
-- Promises
+This project visually explains how asynchronous JavaScript works using a clean UI and live simulation.
+
+---
+
+# 🌐 Live Demo
+
+👉 https://langatbrian.github.io/async-js-project/
+
+---
+
+# 📸 Preview
+
+## Main Interface
+
+![Async JS Preview](assets/async-js-preview.png)
+
+---
+
+# 📊 Async JavaScript Infographic
+
+![Async JS Infographic](assets/async-js-infographic.png)
+# 📸 Project Screenshot
+
+![Async JS Screenshot](assets/project-screenshot.png)
+
+# 🧠 Async JavaScript Infographic
+
+![Async JS Infographic](assets/async-js-infographic.png)
+
+---
+
+# ✨ Features
+
+- Callback Simulation
+- Promise Simulation
+- Async/Await Simulation
+- Clean UI Design
+- Interactive Buttons
+- Console Output Visualization
+- Dark Mode (Optional Enhancement)
+- Beginner-Friendly Learning Tool
+
+---
+
+# 🧠 What I Learned
+
+This project helped me understand:
+
+- JavaScript Callbacks
+- JavaScript Promises
 - Async/Await
+- Event Loop Basics
+- Asynchronous Programming
+- Modular JavaScript Structure
 
-## Live Demo
+---
 
-(Your GitHub Pages link here)
+# 🛠️ Technologies Used
 
-## Project Structure
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- Git
+- GitHub Pages
 
-assets/
-src/
-index.html
-script.js
+---
 
-## Built With
+# 📁 Project Structure
 
-- HTML
-- CSS
-- JavaScript
-
-## Author
-
-Brian Cheruiyot
-
-## Odin Project
-
-Part of The Odin Project JavaScript Curriculum
