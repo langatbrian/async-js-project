@@ -1,4 +1,4 @@
-<img width="1366" height="768" alt="assets project screenshot" src="https://github.com/user-attachments/assets/aff759df-ca11-4ac9-af62-e9446b73e806" />
+
 #  Async JavaScript Simulator
 
 An interactive project demonstrating **Callbacks, Promises, and Async/Await** in JavaScript.
@@ -11,7 +11,7 @@ This project visually explains how asynchronous JavaScript works using a clean U
 
 👉 https://langatbrian.github.io/async-js-project/
 
----<img width="1024" height="1536" alt="fa9ed5f7-1bb3-48ad-b082-6a1c0026c0c4" src="https://github.com/user-attachments/assets/08397e31-c6ab-44f8-8542-e90ef6ebace2" />
+
 
 
 # 📊 Async JavaScript Infographic
