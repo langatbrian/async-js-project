@@ -9,6 +9,9 @@ This project visually explains how asynchronous JavaScript works using a clean U
 # 🌐 Live Demo
 
 👉 https://langatbrian.github.io/async-js-project/
+![Screenshot](Documents/async-js-project/assets/project-screenshot.png)
+
+![Infographic](Documents/async-js-project/assets/async-js-infographic.png)
 
 ---
 # 📸 Preview
