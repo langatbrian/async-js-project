@@ -1,3 +1,4 @@
+<img width="1366" height="768" alt="assets project screenshot" src="https://github.com/user-attachments/assets/aff759df-ca11-4ac9-af62-e9446b73e806" />
 #  Async JavaScript Simulator
 
 An interactive project demonstrating **Callbacks, Promises, and Async/Await** in JavaScript.
